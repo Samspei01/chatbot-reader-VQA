@@ -20,8 +20,8 @@ from pydub.playback import play
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
 def main():
-    st.title("LLM-Powered Chatbot")
-    st.write("Ask me anything or upload a document (PDF, CSV, arXiv) for summarization or question-answering.")
+    st.title("Hamada chatbot")
+    st.write("Ask Hamada anything or upload a document (PDF, CSV, arXiv) for summarization or question-answering.")
 
     memory = Memory()
     pdf_handler = {
@@ -93,7 +93,7 @@ def main():
         st.write(f"You: {chat['user']}")
         st.write(f"Bot: {chat['bot']}")
 
-    uploaded_file = st.file_uploader("Upload a document", type=["pdf", "csv"])
+    uploaded_file = st.file_uploader("Upload a document", type=["pdf", "csv", "arxiv"])
     if uploaded_file:
         if uploaded_file.type == "application/pdf":
             summary = chatbot.process_document(uploaded_file)
@@ -102,6 +102,10 @@ def main():
         elif uploaded_file.type == "text/csv":
             summary = chatbot.process_document(uploaded_file)
             st.write("Summary of CSV:")
+            st.write(summary)
+        elif uploaded_file.type == "application/arxiv":
+            summary = chatbot.process_document(uploaded_file)
+            st.write("Summary of arXiv paper:")
             st.write(summary)
 
     st.write("For Visual Question Answering, upload an image and enter a question.")

@@ -2,6 +2,7 @@ from .RAG import RAG
 from .QA import VisualQuestionAnswering
 import asyncio
 
+
 class Chatbot:
     def __init__(self, memory, pdf_handler, csv_handler, arxiv_handler):
         self.memory = memory
@@ -19,7 +20,6 @@ class Chatbot:
         return response
 
     def generate_response(self, user_input):
-        # Logic to determine if the input is a question, a request for summarization, or a VQA task
         if self.is_question(user_input):
             return self.answer_question(user_input)
         elif self.is_summarization_request(user_input):
@@ -77,6 +77,12 @@ class Chatbot:
             chunks = self.rag.get_text_chunks(data.to_string())
             self.rag.get_vector_store(chunks)  # Create the FAISS index
             summary = self.csv_handler["summarize_csv"](data)
+            return summary
+        elif uploaded_file.type == "application/x-arxiv":
+            text = self.arxiv_handler["extract_text_from_arxiv"](uploaded_file)
+            chunks = self.rag.get_text_chunks(text)
+            self.rag.get_vector_store(chunks)  # Create the FAISS index
+            summary = self.arxiv_handler["summarize_arxiv"](text, self.rag)  # Pass the RAG model
             return summary
         else:
             return "Unsupported file format."

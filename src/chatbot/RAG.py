@@ -13,7 +13,7 @@ import asyncio
 import time
 import google.api_core.exceptions
 
-MAX_TOKEN_LIMIT = 2048
+MAX_TOKEN_LIMIT = 4096
 
 class RAG:
     def __init__(self):
@@ -21,7 +21,7 @@ class RAG:
         self.api_key = os.getenv("GOOGLE_API_KEY")
         genai.configure(api_key=self.api_key)
         self.vector_store_path = "faiss_index"
-        self.cache = LRUCache(maxsize=100)
+        self.cache = LRUCache(maxsize=1000)
         self.embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 
         # Ensure the vector store directory exists
