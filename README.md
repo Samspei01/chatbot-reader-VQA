@@ -65,7 +65,9 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 For any questions or collaborations, feel free to reach out:
 
 - **Abdelrhman Saeed** - [abdosaaed749@gmail.com](mailto:abdosaaed749@gmail.com)
-- **Friend's Name** - [Foadouda@gmail.com](mailto:Foadoua@gmail.com)
+- **Fouad Ouda**
+- [foad.ouda546@gmail.com]
+- (mailto:foad.ouda546gmail.com)
 
 ## License
 
