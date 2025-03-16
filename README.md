@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 # chatbot-reader-VQA
-=======
+
+
 # LLM-Powered Chatbot Application
 
 This project is a Streamlit application that leverages a large language model (LLM) powered by Ollama to create an interactive chatbot. The chatbot supports question-answering and summarization of various document types, including PDF, CSV, and arXiv documents. It also features memory functionality to retain context during conversations and displays the entire conversation history.
@@ -38,7 +38,7 @@ llm-chatbot-app
 
 1. Clone the repository:
    ```
-   git clone <repository-url>
+   git clone https://github.com/Samspei01/chatbot-reader-VQA.git
    cd llm-chatbot-app
    ```
 
@@ -59,6 +59,13 @@ Open your web browser and navigate to `http://localhost:8501` to interact with t
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a pull request or open an issue for any enhancements or bug fixes.
+
+## Contact
+
+For any questions or collaborations, feel free to reach out:
+
+- **Abdelrhman Saeed** - [abdosaaed749@gmail.com](mailto:abdosaaed749@gmail.com)
+- **Friend's Name** - [Foadouda@gmail.com](mailto:Foadoua@gmail.com)
 
 ## License
 
