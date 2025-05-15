@@ -1,4 +1,4 @@
-# chatbot-reader-VQA
+# Chatbot-Reader-VQA
 
 
 # LLM-Powered Chatbot Application
@@ -38,7 +38,7 @@ llm-chatbot-app
 
 1. Clone the repository:
    ```
-   git clone https://github.com/Samspei01/chatbot-reader-VQA.git
+   git clone https://github.com/Samspei01/Chatbot-Reader-VQA.git
    cd llm-chatbot-app
    ```
 
